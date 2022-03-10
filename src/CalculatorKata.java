@@ -6,7 +6,7 @@ public class CalculatorKata {
 
         if (numbers.isEmpty()) return 0;
 
-        String[] numbersSplit = numbers.split("[\n,]");
+        String[] numbersSplit = numbers.split("[\n,//;]");
         StringBuilder NotANumbersException = new StringBuilder("Not a number");
         for (int i=0; i < numbersSplit.length; i++) {
             try {
@@ -36,5 +36,10 @@ public class CalculatorKata {
         System.out.println("*************** Step 3 ********");
         System.out.println(Add("1\n2,3"));
         System.out.println(Add("1,\n"));
+
+
+        // Step 4
+        System.out.println("*************** Step 4 ********");
+        System.out.println(Add("//;\n1;2"));
     }
 }
